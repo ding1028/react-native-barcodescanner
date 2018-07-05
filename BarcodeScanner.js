@@ -8,6 +8,7 @@ import {
   requireNativeComponent,
   StyleSheet,
   View,
+  ViewPropTypes
 } from 'react-native';
 
 import Viewfinder from './Viewfinder';
@@ -54,7 +55,7 @@ class BarcodeScannerView extends Component {
 }
 
 BarcodeScannerView.propTypes = {
-  ...View.propTypes,
+  ...(ViewPropTypes || View.propTypes),
   cameraType: PropTypes.string,
   onBarCodeRead: PropTypes.func,
   showLoadingIndicator: PropTypes.bool,
